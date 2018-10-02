@@ -1,0 +1,12 @@
+{
+   "tests" : [
+      {
+         "output" : "MQo=",
+         "name" : "Large Input",
+         "input" : "NQoxIDIgLTIgMjU3ICqzCg=="
+      }
+   ],
+   "command" : "ruby test.rb",
+   "code" : "cCBbKiQ8XVsxXS5zcGxpdC5taW5fYnl7fGx8dj1sLnRvX2k7dioqNC12fS50b19p",
+   "file" : "test.rb"
+}
