@@ -26,10 +26,10 @@ File.write(source["file"], Base64.decode64(source["code"]).to_s)
 class Tests < Test::Unit::TestCase
  def self.insert(source, test)
    symbol = "Test #{test["name"]}".camelcase.underscore.to_sym
-   output = Base64.decode64(test["output"])
+   expected_output = Base64.decode64(test["output"])
    define_method(symbol, proc {
-     input, status = Open3.capture2(source["command"], stdin_data: Base64.decode64(test["input"]))
-     assert_equal(input, output)
+     actual_output, status = Open3.capture2(source["command"], stdin_data: Base64.decode64(test["input"]))
+     assert_equal(actual_output, expected_output)
    })
  end
 end
